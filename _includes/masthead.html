@@ -40,6 +40,10 @@
         {{ user.location }}
       </div>
     {% endif %}
+    <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+      {% octicon pencil height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Blog %}
+      <a href="https://medium.com/@matissjanis" {% if site.style == 'dark' %}class="text-white"{% endif %}>Blog</a>
+    </div>
     {% if user.hireable %}
       <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
     {% endif %}
